@@ -9,11 +9,14 @@ const deleteUser = async (idUser) => {
         
         const usersReadNoDeleteUser = usersRead.filter((obj) => obj.id != idUser);
 
-        fs.promises.writeFile("users.json", JSON.stringify(usersReadNoDeleteUser));
+        await fs.promises.writeFile("users.json", JSON.stringify(usersReadNoDeleteUser));
+
         console.log(usersReadNoDeleteUser);
+        return usersReadNoDeleteUser;
 
       } catch (error) {
         console.log(error);
+        throw error;
       }
 }
 

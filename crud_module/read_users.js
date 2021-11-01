@@ -8,8 +8,12 @@ const readUsers = async () => {
             { encoding: 'utf-8' },
         );
         const usersRead = JSON.parse(stringUsers);
+
         console.log(usersRead);
+        return usersRead;
+
     } catch (err) {
+        console.log(err);
         throw err;
     }
 }

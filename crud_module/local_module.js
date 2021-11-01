@@ -6,9 +6,9 @@ const updateUser = require('./update_user');
 const deleteUser = require('./delete_user');
 
 
-readUsers();
-// addUser({ username: 'Khánh', password: '1232343534'});
+// readUsers();
+// addUser({ username: 'iiiiiiiii', password: '1232343534'});
 // readUser(2);
-// updateUser(2, { username: 'Khánh', password: '99999'});
+updateUser(2, { username: 'bcs', password: '99999'});
 // deleteUser(1);
 

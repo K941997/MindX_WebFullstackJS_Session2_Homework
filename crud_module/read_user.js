@@ -9,10 +9,13 @@ const readUser = async (idUser) => {
         );
         const usersRead = JSON.parse(stringUsers);
         const user = usersRead.find(obj => obj.id == idUser);
-        console.log(user);
+
+        console.log (user);
+        return user;
 
     } catch (err){
         console.log(err);
+        throw err;
     }
 }
 

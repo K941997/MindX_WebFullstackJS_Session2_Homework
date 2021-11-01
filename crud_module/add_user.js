@@ -13,8 +13,11 @@ const addUser = async (user) => {
             ...usersRead,
             { id: usersRead.length + 1, ...user }
         ];
+        
         await fs.promises.writeFile('users.json', JSON.stringify(usersReadAddOne)) //chuyển array -> string
+
         console.log(usersReadAddOne);
+        return usersReadAddOne;
 
     } catch (err) {
         console.log(err);
